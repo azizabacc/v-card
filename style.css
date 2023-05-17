@@ -18,18 +18,28 @@ body {
     height: 1080px;
   }
   .logo {
-    background-color: blueviolet;
+    display: flex;
     width: 400px;
     margin-left: 100px;
-  }
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: center;
+    margin-left: 200px;
+}
+
   h2{
     font-size: 0.9em;
   }
+
   .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
+    align-content: center;
+    align-items: center;
+}
   .social{
     display: flex;
     flex-direction: row;
