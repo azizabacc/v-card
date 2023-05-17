@@ -84,8 +84,16 @@ body {
     color: whitesmoke;
  
   }
+  .description h1{
+    margin-left: 300px;
+  }
   .titre{
     text-align: center;
+    margin-left: 300px;
+  }
+  .services p{
+    width: 150px;
+    padding-left: 380px;
   }
   .services ul{
     display: flex;
@@ -93,7 +101,33 @@ body {
     padding-left: 380px;
     width: 700px;
   }
+  .services li{
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
   .titre-service{
     font-weight: bolder;
+  }
+  .site p{
+    margin-top: 300px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 250px;
+  }
+  .buttons a{
+    border: solid 2px rgb(92, 90, 90);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #0f0f0f;
+    margin-left: 100px;
   }
   
