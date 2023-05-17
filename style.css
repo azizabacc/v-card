@@ -2,6 +2,7 @@ body {
   
     width:  1920px;
     height: 1080px;
+    font-family: 'Bebas Neue', sans-serif;
 
 
   }
@@ -56,6 +57,7 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin-right: 65px;
 }
   .social{
     display: flex;
@@ -86,14 +88,20 @@ body {
   }
   .description h1{
     margin-left: 300px;
+    font-size: 50px ;
+    font-style: italic;
   }
   .titre{
     text-align: center;
     margin-left: 300px;
+    font-style: italic;
+    margin-top: 0;
   }
   .services p{
-    width: 150px;
+    width: 210px;
     padding-left: 380px;
+    font-weight: bold;
+    font-size: 30px;
   }
   .services ul{
     display: flex;
@@ -103,24 +111,30 @@ body {
   }
   .services li{
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    line-height: 1.2em;
   }
   .titre-service{
     font-weight: bolder;
   }
   .site p{
-    margin-top: 300px;
+    text-align: center;
+    margin-top: 56px;
+    font-size: larger;
+    font-style: italic ;
   }
   .buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-left: 250px;
+   
+  
+    margin-left: 289px;
   }
   .buttons a{
-    border: solid 2px rgb(92, 90, 90);
+    border: solid 2px rgb(15, 15, 15);
     color: white;
-    padding: 15px 32px;
+    padding: 15px 32px 20px 20px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -129,5 +143,7 @@ body {
     cursor: pointer;
     background-color: #0f0f0f;
     margin-left: 100px;
+    box-shadow: 5px 10px 8px 10px #0f0f0f;
+    text-align: center;
   }
   
