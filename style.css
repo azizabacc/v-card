@@ -7,11 +7,14 @@ body {
 
     grid-gap: 5px;
     grid-template-columns: 1fr 4fr 7fr;
-    align-items: start;
-    justify-items: center;
+    grid-auto-rows: minmax(100px,auto);
+   /* grid-auto-columns: minmax(150px,auto);*/
+    align-items: stretch;
+    justify-items: center;/* or strech to test at the end*/
     margin: 0;
     border: 5px solid white;
     border-radius: 10px;
+    padding: 5px;
    
 
     font-family: 'Bebas Neue', sans-serif;
@@ -19,10 +22,13 @@ body {
 }
 .logo{ 
     grid-area: logo;
-    width: 50%;
+    width: 100px;
  background-color: whitesmoke;
  border-radius: 5px 50px;
  margin-right: 50%;
+ margin-left: auto;
+ align-items: start;
+ height: min-content;
 
 
 }
@@ -32,12 +38,130 @@ body {
     color: white;
     text-align: center;
     padding-right: 10%;
- 
+    display: grid;
+    grid-template-areas: " name"
+    " contact"
+    " social";
+    grid-template-rows: 2fr 4fr 1fr ;
+    align-items: end;
+    margin-left: 10px;
 }
+.name{ 
+    grid-area: name;
+
+}
+.name h1{
+    font-size: 2.5em;
+}
+.contact{
+    grid-area: contact;
+    margin-bottom: 40%;
+
+}
+ .social{
+    grid-area: social;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 20%;
+ }
+ .info {
+    margin-bottom: 20%;
+ }
 .description{
     grid-area: description;
     text-align: left;
     background-color: rgb(96, 97, 97);
 padding-left: 10%;
 color: whitesmoke;
+display: grid;
+grid-template-areas: " desc-title"
+                    " services"
+                    " buttons"
+                    "site";
+grid-template-rows: 2fr 4fr 1fr 1fr;
+justify-items: center;
+
+}
+.desc-title{ 
+    grid-area: desc-title;
+}
+.services{
+    grid-area: services;
+ 
+                    
+}
+.buttons {
+    grid-area: buttons;
+}
+
+.desc-title h1{
+    font-size: 2.5em;
+    text-align: center;
+    font-style: italic;
+}
+.desc-title h2{
+    text-align: center;
+    font-style: italic;
+
+}
+.services p{
+    grid-area: nosServices;
+    font-weight: bold;
+    font-size: 30px;
+    /*text-align: center;*/
+}
+.services ul {
+    grid-area: list;
+ display: grid;
+    list-style-type: none;
+    grid-template-rows:  auto auto  auto;
+    row-gap: 10px;
+   
+    
+}
+
+.titre-service1{
+    grid-area: titre-service1;
+
+   
+}
+.titre-service2{
+    grid-area: titre-service2;
+}
+.titre-service3{
+    grid-area: titre-service3;
+}
+.service1{
+    grid-area: service1;
+}
+.service2{
+    grid-area: service2;
+}
+.service3{
+    grid-area: service3;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto ;
+    column-gap: 50px;
+    align-items: center;
+}
+.buttons a{
+    border: solid 2px rgb(15, 15, 15);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: #0f0f0f;
+    box-shadow: 5px 10px 8px 10px #0f0f0f;
+  
+  }
+  
+  .site{
+    grid-area: site;
+}
+.site p{
+    font-style: italic;
 }
