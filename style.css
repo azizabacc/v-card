@@ -1,24 +1,30 @@
 
 body {
+    box-sizing: border-box;
     display: grid;
-    grid-template-areas: " logo bleu description"
-                        " logo bleu description"
-                        " logo bleu description";
+    grid-template-areas: " logo bleu photo description"
+                        " logo bleu photo description"
+                        " logo bleu photo description";
 
     grid-gap: 5px;
-    grid-template-columns: 1fr 4fr 7fr;
+    grid-template-columns: 1fr 4fr 1fr 7fr;
     grid-auto-rows: minmax(100px,auto);
    /* grid-auto-columns: minmax(150px,auto);*/
     align-items: stretch;
     justify-items: center;/* or strech to test at the end*/
     margin: 0;
-    border: 5px solid white;
-    border-radius: 10px;
+   /* border: 5px solid white;
+    border-radius: 10px;*/
     padding: 5px;
    
 
     font-family: 'Bebas Neue', sans-serif;
     background-color: black;
+}
+.photo{ grid-area: photo;
+/* box-shadow: 5px 10px 8px 10px #817a7a; */
+height: 696px;
+margin-top: 150px;
 }
 .logo{ 
     grid-area: logo;
@@ -27,7 +33,7 @@ body {
  border-radius: 5px 50px;
  margin-right: 50%;
  margin-left: auto;
- align-items: start;
+
  height: min-content;
 
 
@@ -43,8 +49,9 @@ body {
     " contact"
     " social";
     grid-template-rows: 2fr 4fr 1fr ;
-    align-items: end;
+ /*   align-items: end;*/
     margin-left: 10px;
+    margin-right: 10px;
 }
 .name{ 
     grid-area: name;
@@ -80,6 +87,8 @@ grid-template-areas: " desc-title"
                     "site";
 grid-template-rows: 2fr 4fr 1fr 1fr;
 justify-items: center;
+box-shadow: 3px 3px  rgb(133, 133, 132), -1em 0 .4em rgb(54, 54, 54);
+
 
 }
 .desc-title{ 
@@ -143,6 +152,7 @@ justify-items: center;
 .buttons{
     display: grid;
     grid-template-columns: auto auto ;
+    height: min-content;
     column-gap: 50px;
     align-items: center;
 }
@@ -161,7 +171,127 @@ justify-items: center;
   
   .site{
     grid-area: site;
+  
 }
 .site p{
     font-style: italic;
+
 }
+
+@media (max-width: 1344px) {
+
+
+body {
+    display: grid;
+    grid-template-areas: " logo "
+                        " bleu "
+                        "photo"
+                        " description";
+
+    /* grid-gap: 5px; */
+    grid-template-rows: auto 4fr auto 7fr;
+    grid-auto-rows: minmax(100px,auto);
+   /* grid-auto-columns: minmax(150px,auto);*/
+    align-items: stretch;
+    justify-items: center;/* or strech to test at the end*/
+    margin: 0;
+  
+
+
+
+
+    width: 100vw;
+
+    font-family: 'Bebas Neue', sans-serif;
+    background-color: black;
+}
+.bleu {
+    grid-area: bleu;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-right: 10%;
+    display: grid;
+    grid-template-areas: " name"
+    " contact"
+    " social";
+    grid-template-rows: 2fr 4fr 1fr ;
+    align-items: end;
+    margin-left: 10px;
+    margin-right: 10px;
+
+width: 100vw;
+}
+.photo{
+    margin-top: 0px;
+    margin-right: 55px;
+    
+}
+.description{
+    grid-area: description;
+    text-align: center;
+    background-color: rgb(96, 97, 97);
+
+color: whitesmoke;
+display: grid;
+grid-template-areas: " desc-title"
+                    " services"
+                    " buttons"
+                    "site";
+grid-template-rows: 1fr 2fr 1fr 1fr;
+
+
+
+width: 100vw;
+}
+
+.logo{ 
+    grid-area: logo;
+    margin-left: 0px;
+ background-color: whitesmoke;
+ border-radius: 5px 50px;
+
+
+ height: min-content;
+
+
+}
+.name h1{
+    font-size: 2.5em;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+.name h2{
+    margin-right: 24px;
+    margin-left: 24px;
+}
+.contact{
+    grid-area: contact;
+    margin-bottom: 40%;
+    margin-right: 24px;
+    margin-left: 24px;
+
+}
+
+.desc-title {
+    margin-top: 20px;
+    margin-right: 140px;
+    margin-left: 0px;
+    height: auto;
+
+}
+.services{
+    margin-right: 140px;
+    margin-left: 0px;
+
+}
+.buttons{
+    margin-right: 140px;
+    margin-left: 0px;
+    height: min-content;
+}
+.site{
+    margin-top: 0px;
+    margin-right: 52px;
+}
+  }
